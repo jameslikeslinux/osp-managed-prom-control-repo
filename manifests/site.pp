@@ -15,6 +15,14 @@ File { backup => false }
 
 ## Node Definitions ##
 
+node foreman {
+  include role::foreman
+}
+
+node osp {
+
+}
+
 # The default node definition matches any node lacking a more specific node
 # definition. If there are no other node definitions in this file, classes
 # and resources declared in the default node definition will be included in
