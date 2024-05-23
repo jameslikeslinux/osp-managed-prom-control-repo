@@ -1,3 +1,3 @@
-class role::foreman {
+class role::osp {
   include profile::base
 }

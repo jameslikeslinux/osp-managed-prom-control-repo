@@ -20,7 +20,7 @@ node foreman {
 }
 
 node osp {
-
+  include role::osp
 }
 
 # The default node definition matches any node lacking a more specific node
