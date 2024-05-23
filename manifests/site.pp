@@ -15,14 +15,6 @@ File { backup => false }
 
 ## Node Definitions ##
 
-node foreman {
-  include role::foreman
-}
-
-node osp {
-  include role::osp
-}
-
 # The default node definition matches any node lacking a more specific node
 # definition. If there are no other node definitions in this file, classes
 # and resources declared in the default node definition will be included in
@@ -33,7 +25,5 @@ node osp {
 #
 # For more on node definitions, see: https://puppet.com/docs/puppet/latest/lang_node_definitions.html
 node default {
-  # This is where you can declare classes for all nodes.
-  # Example:
-  #   class { 'my_class': }
+  hiera_include('classes')
 }
