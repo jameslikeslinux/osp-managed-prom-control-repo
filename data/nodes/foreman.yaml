@@ -1,5 +1,3 @@
 ---
 classes:
   - 'role::foreman'
-
-foreman::repo::repo: '3.10'
