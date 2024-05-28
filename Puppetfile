@@ -18,6 +18,7 @@ mod 'puppetlabs-postgresql', '10.0.3'
 mod 'puppetlabs-puppetdb', '7.13.0'
 mod 'puppetlabs-stdlib', '9.6.0'
 mod 'theforeman-foreman', '25.0.0'
+mod 'theforeman-foreman_proxy', '26.0.0'
 mod 'theforeman-puppet', '19.2.0'
 mod 'theforeman-puppetserver_foreman', '4.0.0'
 
