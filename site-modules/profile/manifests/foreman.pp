@@ -1,7 +1,6 @@
 class profile::foreman {
   include foreman::repo
   include foreman
-  include foreman::plugin::puppet
 
   # Not strictly required, but it enables Puppet support for
   # `foreman::plugin::puppet` before foreman_proxy is managed
@@ -10,6 +9,7 @@ class profile::foreman {
     puppet   => true,
     puppetca => false,
   }
+  -> class { 'foreman::plugin::puppet': }
 
   group { 'puppet':
     system => true,
