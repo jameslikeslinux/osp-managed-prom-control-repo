@@ -2,8 +2,4 @@
 classes:
   - 'role::foreman'
 
-# Foreman version to install
 foreman::repo::repo: '3.10'
-
-# Allow OSP to use Foreman ENC and upload facts
-foreman::trusted_proxies: ['osp']
