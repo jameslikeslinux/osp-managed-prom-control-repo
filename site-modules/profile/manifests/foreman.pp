@@ -9,7 +9,11 @@ class profile::foreman {
     puppet   => true,
     puppetca => false,
   }
-  -> class { 'foreman::plugin::puppet': }
+
+  # Only manage Puppet plugin after initial Foreman installation
+  if $facts['foreman_dynflow'] {
+    include 'foreman::plugin::puppet'
+  }
 
   group { 'puppet':
     system => true,
