@@ -3,6 +3,9 @@ class profile::foreman {
   include foreman
   include foreman::plugin::puppet
 
+  # Not strictly required, but it enables Puppet support for
+  # `foreman::plugin::puppet` before foreman_proxy is managed
+  # on the real Puppet Server.
   class { 'foreman_proxy':
     puppet   => true,
     puppetca => false,
