@@ -6,11 +6,6 @@ class profile::foreman {
   class { 'foreman_proxy':
     puppet   => true,
     puppetca => false,
-    tftp     => false,
-    dhcp     => false,
-    dns      => false,
-    bmc      => false,
-    realm    => false,
   }
 
   group { 'puppet':
