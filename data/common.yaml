@@ -1,2 +1,2 @@
 ---
-message: "This node is using common data"
+foreman::initial_admin_password: 'admin'
