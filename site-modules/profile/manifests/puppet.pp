@@ -17,7 +17,7 @@ class profile::puppet (
       server_external_nodes      => '',
       server_foreman             => true,
       server_foreman_url         => 'https://foreman/',
-      server_reports             => 'puppetdb',
+      server_reports             => 'foreman,puppetdb',
       server_storeconfigs        => true,
     }
 
