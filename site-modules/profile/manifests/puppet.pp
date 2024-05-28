@@ -14,7 +14,6 @@ class profile::puppet (
       environment                => 'production',
       server                     => true,
       server_common_modules_path => $common_modules_path, # avoid conflict with r10k
-      server_external_nodes      => '',
       server_foreman             => true,
       server_foreman_url         => 'https://foreman/',
       server_reports             => 'foreman,puppetdb',
