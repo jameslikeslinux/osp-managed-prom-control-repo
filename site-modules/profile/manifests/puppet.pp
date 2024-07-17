@@ -14,9 +14,9 @@ class profile::puppet (
       environment                => 'production',
       server                     => true,
       server_common_modules_path => $common_modules_path, # avoid conflict with r10k
-      server_foreman             => true,
-      server_foreman_url         => 'https://foreman',
-      server_reports             => 'foreman,puppetdb',
+      server_external_nodes      => '',
+      server_foreman             => false,
+      server_reports             => 'puppetdb',
       server_storeconfigs        => true,
     }
 
@@ -30,19 +30,10 @@ class profile::puppet (
       cachedir => '/var/r10k',
       sources  => {
         'control-repo' => {
-          'remote'  => 'https://github.com/jameslikeslinux/osp-workshop-control-repo.git',
+          'remote'  => 'https://github.com/jameslikeslinux/osp-managed-prom-control-repo.git',
           'basedir' => '/etc/puppetlabs/code/environments',
         },
       },
-    }
-
-    include foreman::repo
-
-    class { 'foreman_proxy':
-      foreman_base_url => 'https://foreman',
-      puppet           => true,
-      puppetca         => false,
-      trusted_hosts    => ['foreman'],
     }
   } else {
     class { 'puppet':
