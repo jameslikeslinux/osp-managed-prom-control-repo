@@ -1,3 +1,3 @@
 class profile::prometheus {
-  # empty
+  include prometheus::server
 }

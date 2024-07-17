@@ -4,7 +4,7 @@ forge 'https://forge.puppet.com'
 # Versions should be updated to be the latest at the time you start
 mod 'puppet-extlib', '7.0.0'
 mod 'puppet-r10k', '13.0.0'
-mod 'puppet-systemd', '7.0.0'
+mod 'puppet-systemd', '7.1.0'
 mod 'puppetlabs-apt', '9.4.0'
 mod 'puppetlabs-augeas_core', '1.5.0'
 mod 'puppetlabs-concat', '9.0.2'
@@ -16,6 +16,10 @@ mod 'puppetlabs-postgresql', '10.0.3'
 mod 'puppetlabs-puppetdb', '7.13.0'
 mod 'puppetlabs-stdlib', '9.6.0'
 mod 'theforeman-puppet', '19.2.0'
+
+# For Prometheus
+mod 'puppet-archive', '7.1.0'
+mod 'puppet-prometheus', '15.0.0'
 
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
