@@ -9,8 +9,9 @@ class profile::puppet (
     ]
 
     class { 'puppet':
-      agent_server_hostname      => $trusted['certname'],
+      agent_server_hostname      => 'osp',
       autosign                   => true,
+      dns_alt_names              => ['osp'],
       environment                => 'production',
       server                     => true,
       server_common_modules_path => $common_modules_path, # avoid conflict with r10k
